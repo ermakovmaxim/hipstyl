@@ -1,0 +1,36 @@
+@import '../lib/color/pastelify'
+@import '../lib/shadow/longshade'
+@import '../lib/general/conical'
+
+body
+  background-color darken(pastelify(rgb(1,2,3)), 50%)
+
+header
+  .circle
+    position absolute
+    width w = 500px
+    height h = 500px
+    margin 0 auto
+    overflow hidden
+    background-color pastelify(#1DA1CD)
+    border-radius 50%
+    top 50%
+    left 50%
+    margin-left -(w / 2)
+    margin-top -(h / 2)
+    text-align center
+    box-shadow 5px 5px 1px darken(pastelify(rgb(1,2,3)), 60%)
+    z-index 100
+    h1
+      font-size 8em
+      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 50%), 500)
+      color #fff
+      font-family 'Dosis', sans-serif
+      line-height 1.5
+      margin-top 150px
+    h2
+      font-size 1em
+      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 60%), 500)
+      color #1DA1CD
+      font-family 'Dosis', sans-serif
+      line-height .5
