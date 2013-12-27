@@ -76,8 +76,7 @@ var stylus = require('stylus')
 
 stylus(str)
     .use(hipstyl.css())
-    // more stylus config
-    });
+    // call render & add more stylus config
 ```
 
 ##Got a hipstyl? Really?
