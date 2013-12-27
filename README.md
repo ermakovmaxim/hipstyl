@@ -57,8 +57,6 @@ gulp.task('one', function () {
 
 ###Connect/Express
 
-For express or connect framework you can simply include hipstyl middleware method into Stylus' compiler:
-
 ```javascript
 var stylus = require('stylus')
   , hipstyl = require('hipstyl')
@@ -71,8 +69,6 @@ app.configure(function(){
 
 ###Other enviroments
 
-As for pure node.js or some other cases dookie has method called css. Here is an example of simple static server.js using Stylus + hipstyl:
-
 ```javascript
 var stylus = require('stylus')
   , hipstyl = require('hipstyl')
@@ -80,11 +76,7 @@ var stylus = require('stylus')
 
 stylus(str)
     .use(hipstyl.css())
-    .render(function (err, css) {
-        if (err) {
-            throw err;
-        }
-        // do smth with 'css'
+    // more stylus config
     });
 ```
 
