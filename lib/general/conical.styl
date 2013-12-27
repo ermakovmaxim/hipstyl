@@ -10,32 +10,36 @@
 */
 
 // private, do not use it
-_circle(size)
+circle(size)
   position absolute
   border-radius 50%
-  left calc(50% - size/2)
-  top calc(50% - size/2)
+  left calc(50% - 25em)
+  top calc(50% - 25em)
   width size
   height size
 
 conical(wheel, colors)
-  _circle(wheel)
+  circle(wheel)
   clip rect(0, wheel, wheel, wheel/2)
 
   &:after, &:nth-child(n+7), &:nth-child(n+7):after
-    _circle(wheel)
+    content ''
+    circle(wheel)
 
   &:nth-child(n+7):after
+    content ''
     clip rect(0, wheel, wheel, wheel/2)
 
-  &:after, .color:nth-child(n+7)
-  clip rect(0, wheel/2, wheel, 0)
+  &:after, &:nth-child(n+7)
+    content ''
+    clip rect(0, wheel/2, wheel, 0)
 
   for num in (1..13)
     &:nth-child({num}):after
-       background-color colors[num % length(colors)]
-      if i < 7
-        transform rotate({30*num}deg)
+      content ''
+      background-color colors[num % length(colors)]
+      if num < 7
+        transform rotate(30 * num * 1deg)
         z-index 12 - num
       else
-        transform rotate({(-30)+30*num}deg)
+        transform rotate((-30) + 30 * num * 1deg)
