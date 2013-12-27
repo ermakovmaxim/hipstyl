@@ -1,0 +1,18 @@
+/*
+
+  Long Shade
+
+  Jú Gonçalves <github@jugoncalv.es>
+  MIT
+
+*/
+
+longShade(prop, color, size, left = false)
+  size = size - 35
+  shade = '0px 0px ' + color
+  direction = ''
+  if left
+    direction = '-'
+  for num in (1..size)
+    shade = shade + ', ' + direction + num + 'px ' + num + 'px ' + color
+  {prop} unquote(shade)

@@ -1,0 +1,34 @@
+{
+  "name": "hipstyl",
+  "version": "0.1.0",
+  "description": "a collection of hipster-ish mixins for stylus",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r nyan ./tests/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jugoncalves/hipstyl.git"
+  },
+  "keywords": [
+    "hipster",
+    "effects",
+    "stylus",
+    "css",
+    "mixin",
+    "lib"
+  ],
+  "author": "Ju Goncalves <github@jugoncalv.es>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jugoncalves/hipstyl/issues"
+  },
+  "devDependencies": {
+    "tiny-lr": "0.0.5",
+    "gulp-livereload": "~0.1.1",
+    "gulp-concat": "~2.1.4",
+    "gulp-styl": "~0.1.2",
+    "gulp-browserify": "~0.2.2",
+    "mocha": "~1.16.2"
+  }
+}
