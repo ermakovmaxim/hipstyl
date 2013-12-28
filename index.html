@@ -1,16 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>hipstyl | a collection of hipster-ish mixins for stylus</title>
     <link href="http://fonts.googleapis.com/css?family=Dosis:400,200" rel="stylesheet" type="text/css">
     <link href="public/css.css" rel="stylesheet" type="text/css">
+    <script async="async" src="http://codepen.io/assets/embed/ei.js"></script>
   </head>
-  <body>
+  <body><a href="https://github.com/jugoncalves/hipstyl"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_white_ffffff.png" alt="Fork me on GitHub"></a>
     <header>
       <div class="circle">
         <h1>hipstyl</h1>
         <h2>a collection of hipster-ish mixins for stylus</h2>
       </div>
     </header>
+    <section>
+      <h3>The Collection</h3>
+      <p>Check out our current hipstyls.</p>
+      <h4>Color</h4><p data-height="400" data-theme-id="3319" data-slug-hash="gFunk" data-user="jugoncalves" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jugoncalves/pen/gFunk'>pastelify</a> by Jú Gonçalves (<a href='http://codepen.io/jugoncalves'>@jugoncalves</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <h4>Button</h4><p data-height="350" data-theme-id="3319" data-slug-hash="Bxfml" data-user="jugoncalves" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jugoncalves/pen/Bxfml'>pressable</a> by Jú Gonçalves (<a href='http://codepen.io/jugoncalves'>@jugoncalves</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <h4>Loading</h4><p data-height="268" data-theme-id="3319" data-slug-hash="qFJcK" data-user="jugoncalves" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jugoncalves/pen/qFJcK'>website loading bar</a> by Jú Gonçalves (<a href='http://codepen.io/jugoncalves'>@jugoncalves</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <h4>Shadow</h4><p data-height="300" data-theme-id="3319" data-slug-hash="Htpuy" data-user="jugoncalves" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jugoncalves/pen/Htpuy'>longshade</a> by Jú Gonçalves (<a href='http://codepen.io/jugoncalves'>@jugoncalves</a>) on <a href='http://codepen.io'>CodePen</a></p>
+      <p data-height="400" data-theme-id="3319" data-slug-hash="efJHn" data-user="jugoncalves" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/jugoncalves/pen/efJHn'>raised shadow</a> by Jú Gonçalves (<a href='http://codepen.io/jugoncalves'>@jugoncalves</a>) on <a href='http://codepen.io'>CodePen</a></p>
+    </section>
+    <section>
+      <h3>Getting Started</h3>
+      <p>Grab it from npm</p>
+      <pre><code class="line">$ npm install hisptyl</code></pre>
+      <p>Then use it within your favorite enviroment or tool.</p>
+      <h4>Stylus CLI Tool</h4>
+      <pre><code class="line">$ stylus --use ./node_modules/hipstyl/hipstyl.js --out ./</code></pre>
+      <h4>Gulp</h4>
+      <p>Just add<code>require('hipstyl').css</code>to<code>use</code>array of Stylus' plugin.</p>
+      <pre><code>
+          var gulp = require('gulp')
+          , stylus = require('gulp-stylus')
+          ;
+          gulp.task('one', function () {
+            gulp.src('./css/one.styl')
+            .pipe(stylus({
+              use: [require('hipstyl').css]
+              compress: false
+            }))
+          .pipe(gulp.dest('./css'));</code></pre>
+      <h4>Connect or Express</h4>
+      <p>Just add the Hipstyl's middleware to Stylus' middleware.</p>
+      <pre><code>
+          var stylus = require('stylus')
+             , hipstyl = require('hipstyl')
+             ;
+          app.configure(function(){
+            app.use(
+              stylus.middleware({
+                src: __dirname + '/public',
+                compile: hipstyl.middleware
+              })
+            );
+          });</code></pre>
+      <h4>Other enviroments</h4>
+      <p>In other enviroments, just <code>use</code><code>hipstyl.css()</code>.</p>
+      <pre><code>
+          var stylus = require('stylus')
+             , hipstyl = require('hipstyl')
+             ;
+          stylus(str)
+            .use(hipstyl.css())
+            // call render & add more stylus config</code></pre>
+    </section>
+    <section>
+      <h3>Got a hipstyl? Really?</h3>
+      <p>
+        It'd be awesome to have your effect/mixin into hipstyl collection. So, make a Pull Request following these steps:
+        
+      </p>
+      <ol>
+        <li>Find a category your hipstyl fits (if there's no one, create one).</li>
+        <li>Add your hipstyl in a mixin/selector inheritance form.</li>
+        <li>Pull request it.</li>
+        <li>????</li>
+        <li>PROFIT!!!1</li>
+      </ol>
+      <p>
+        To be accepted, your hipstyl must follow these requirements:
+        
+      </p>
+      <ol>
+        <li>It must be written in Stylus.</li>
+        <li>It should require none or the minimal markup possible ( try<code>:before</code>and<code>:after</code>)</li>
+        <li>It should be hipster :D</li>
+        <li>It must provide docs and a demo - <a href="http://codepen.io/">codepen.io</a>is recommended.</li>
+      </ol>
+    </section>
+    <section>
+      <h3>License</h3>
+      <p class="line">The MIT License (MIT)<br>Copyright (c) 2013 Jú Gonçalves</p>
+    </section>
   </body>
 </html>

@@ -2,35 +2,103 @@
 @import '../lib/shadow/longshade'
 @import '../lib/general/conical'
 
+coding
+  background-color pastelify(#1DA1CD)
+  color darken(pastelify(rgb(1,2,3)), 60%)
+  padding 0 5px
+  margin 0 5px
+  border-radius 5px
+  display inline-block
+
+
 body
   background-color darken(pastelify(rgb(1,2,3)), 50%)
+  font-family Helvetica, Arial, sans-serif
+  color #fff
+  padding-bottom 100px
 
 header
   .circle
-    position absolute
+    position relative
     width w = 500px
     height h = 500px
-    margin 0 auto
+    margin 30px auto 0
     overflow hidden
     background-color pastelify(#1DA1CD)
     border-radius 50%
     top 50%
     left 50%
     margin-left -(w / 2)
-    margin-top -(h / 2)
     text-align center
     box-shadow 5px 5px 1px darken(pastelify(rgb(1,2,3)), 60%)
-    z-index 100
     h1
       font-size 8em
-      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 50%), 500)
+      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 50%), 200)
       color #fff
       font-family 'Dosis', sans-serif
       line-height 1.5
       margin-top 150px
     h2
-      font-size 1em
-      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 60%), 500)
+      font-size 1.2em
+      longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 60%), 150)
       color #1DA1CD
       font-family 'Dosis', sans-serif
       line-height .5
+      margin-top -20px
+
+section
+  width 500px
+  margin 50px auto 0
+  h3
+    font-size 2em
+    longShade('text-shadow', darken(pastelify(rgb(1,2,3)), 60%), 50)
+    font-family 'Dosis', sans-serif
+    text-align center
+    line-height 1em
+  h4
+    font-size 1.5em
+    font-family 'Dosis', sans-serif
+    line-height 1em
+    margin 30px 0 15px
+  p
+    line-height 1.5em
+    font-weight 300
+    &.line
+      text-align center
+    code
+      @extend coding
+  a
+    color pastelify(#1DA1CD)
+    font-family 'Dosis', sans-serif
+    text-decoration none
+    display inline-block
+    padding 5px 5px 10px
+    margin 0 5px
+    border-radius 5px
+    font-size 1.5em
+    transition all .5s ease
+    &:hover
+      background-color pastelify(#1DA1CD)
+      color darken(pastelify(rgb(1,2,3)), 60%)
+  ul, ol
+    li
+      font-weight 300
+      margin-bottom 10px
+      line-height 1.5em
+      code
+        @extend coding
+  ul
+    li
+      list-style none
+  pre
+    code
+      background-color pastelify(#1DA1CD)
+      color darken(pastelify(rgb(1,2,3)), 60%)
+      padding 10px 10px 20px
+      margin 10px 0
+      border-radius 5px
+      display block
+      overflow-x auto
+      line-height 1.5em
+      &.line
+        padding 10px
