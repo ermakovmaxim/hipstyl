@@ -7,19 +7,16 @@
 
 */
 
-
 raised(color, box = false)
+  prop-color = 'color'
+  prop-shadow = 'text-shadow'
   if box
-    prop = 'color'
-  else
-    prop = 'background-color'
-  box-shadow
-    0px 1px darken(color, 20%),
-    0px 2px darken(color, 20%)),
-    0px 3px darken(color, 20%)),
-    0px 4px darken(color, 20%)),
-    0px 5px darken(color, 20%)),
-    0px 5px 10px rgba(1,1,1,0.25),
-    0px 5px 3px rgba(1,1,1,0.8);
-  {prop} color
-  transform rotate3d(1, 2.0, 3.0, -10deg) skewX(-10deg)
+    prop-color = 'background-color'
+    prop-shadow = 'box-shadow'
+  shadow = '0px 1px ' + darken(color, 30%)
+  for num in (2..10)
+    shadow = shadow + ', 0px ' + num + 'px ' + darken(color, 40%)
+  shadow = shadow + ', 0px 5px 10px ' + rgba(1,1,1,0.25) + ', 0px 5px 3px ' + rgba(1,1,1,0.8)
+  {prop-shadow} unquote(shadow)
+  {prop-color} color
+  transform rotate3d(1, 2.0, 3.0, -15deg) skewX(-10deg)

@@ -1,4 +1,9 @@
 /*
+  
+  ===================
+  buggy, do no use it
+  ===================
+  (stylus cannot substitute a var to its value inside the css' calc function)
 
   Conical
 
@@ -13,8 +18,8 @@
 circle(size)
   position absolute
   border-radius 50%
-  left calc(50% - 25em)
-  top calc(50% - 25em)
+  left calc(50% - size / 2em)
+  top calc(50% - size / 2em)
   width size
   height size
 
