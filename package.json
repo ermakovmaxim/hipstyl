@@ -1,6 +1,6 @@
 {
   "name": "hipstyl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "a collection of hipster-ish mixins for stylus",
   "main": "index.js",
   "scripts": {

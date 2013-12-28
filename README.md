@@ -9,6 +9,7 @@ Check out our current hipstyls.
 ###Color
 
  - Pastelify
+ - Be flat
 
 ###Buttons
 
