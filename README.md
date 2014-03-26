@@ -49,7 +49,7 @@ var gulp = require('gulp')
 gulp.task('one', function () {
     gulp.src('./css/one.styl')
         .pipe(stylus({
-            use: [require('hipstyl').css]
+            use: [__dirname + '/node_modules/hipstyl/hipstyl']
             compress: false
         }))
         .pipe(gulp.dest('./css'));

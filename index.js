@@ -2,7 +2,7 @@ var stylus = require('stylus')
   , hipstyl = hipstyl || {}
   ;
 
-hipstyl.path = __dirname + 'lib';
+hipstyl.path = __dirname + '/lib';
 
 hipstyl.middleware = function(str, path) {
   return stylus(str).set('filename', path).use(css());
@@ -11,7 +11,7 @@ hipstyl.middleware = function(str, path) {
 hipstyl.css = function() {
   return function (style) {
     style.include(__dirname);
-    style.import('lib');
+    style.import(hipstyl.path + '/**/*');
   };
 }
 
