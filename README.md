@@ -94,7 +94,7 @@ To be accepted, your hipstyl must follow these requirements:
 1. It must be written in Stylus.
 2. It should use none or the minimal markup possible (try `:before` and `:after`)
 3. It should be hipster :D
-4. It must provide docs and a demo - [codepen.io][] is recommended.
+4. It must provide docs and a demo - [codepen.io][codepen.io] is recommended.
 
 ##License
 
